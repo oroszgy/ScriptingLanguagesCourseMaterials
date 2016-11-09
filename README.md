@@ -1,6 +1,6 @@
 # Teaching materials for Scripting Languages and Advanced Python courses
 
-This repository contains slides, tutorials and exercises for two university lectores taught in the Pázmány Péter Catholic University of Budapest.
+This repository contains slides, tutorials and exercises for two university lectures taught in the Pázmány Péter Catholic University of Budapest.
    * "Introduction to Scripting Languages" -- fall semesters in 2012-2015
    * "Advanced Python" / "Python for Data Science" -- spring semesters 2015-2016
 
