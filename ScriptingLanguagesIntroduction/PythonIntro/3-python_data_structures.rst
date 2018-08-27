@@ -23,7 +23,7 @@ a **mutable** sequence `type <http://docs.python.org/3/library/stdtypes.html#lis
     range(5) # same as above
     l = list("abc") # ["a", "b", "c"]
     " ".join(l) # "a b c"
-    [1,2,3,4,5,6,7,8,9,10][2::2] # [2,4,6,8,10]
+    [1,2,3,4,5,6,7,8,9,10][1::2] # [2,4,6,8,10]
 
 What is the difference between  ``sorted(l)`` vs. ``l.sort()``?
 

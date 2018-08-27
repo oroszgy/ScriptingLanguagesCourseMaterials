@@ -74,7 +74,7 @@ Definitions
 * compiler
 * compiled programming languages
 * assembly
-* inrpreter
+* interpreter
 * interpreted languages
 * bytecode
 * virtual machine
