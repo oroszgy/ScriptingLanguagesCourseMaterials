@@ -358,7 +358,17 @@ Exercises
     .. code-block:: python
 
         >> word_tokenize(u"Josh, this is a (very) nice day!")
-        u"Jush , this is a ( very ) nice day !"    
+        u"Jush ⬛, this is a (⬛ very ⬛) nice day ⬛!"
+
+#. To translate numbers, dates or URL is a challenge for machine translation systems. These words greatly increase the vocabulary size because MT systems should learn all numburs one-by-one. The solution is placeholders. The task is to create a script which mark all matched numbers in parallel data and change them to a symbol.
+
+    E.g.    ``I live in the 2nd floor.     A 2. emeleten lakom.``
+        should become 
+            ``I live in the ⬛num_1⬛ ⬛nd foor ⬛.      A ⬛num_1⬛ ⬛. emeleten lakom ⬛.``
+            
+    E.g.    `` The date is 26/03/2019.     Ma 2019. 03. 26.-a van.``
+        should become
+            ``The date is ⬛date_1⬛ ⬛.       Ma ⬛date_1⬛ ⬛. ⬛-⬛ a van ⬛.
 
 #. Create a script which shortens a python script by removing all lines that are empty or contain only  comments. 
 
