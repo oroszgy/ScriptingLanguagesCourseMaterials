@@ -397,7 +397,7 @@ Exercises
         11
             
     .. file belinkelese - Marci
-#. Download the file ``BadKangaroo.py`` and find the error in the code.
+#. Download the file `BadKangaroo.py <https://www.greenteapress.com/thinkpython/code/BadKangaroo.py>` and find the error in the code.
 
     .. Design Patterns kovetkezo feleves targy, magyarazat szukseges, vagy ki is hagyhatjuk ezt a peldat
 #. Implement the following design patterns:
