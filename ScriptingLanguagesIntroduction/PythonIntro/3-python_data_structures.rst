@@ -7,6 +7,7 @@ Basic data structures in Python
 --------
 
 a **mutable** sequence `type <http://docs.python.org/3/library/stdtypes.html#list>`_
+https://realpython.com/python-lists-tuples/
 
 .. code-block:: python
 
@@ -52,6 +53,7 @@ an **immutable** sequence `type <http://docs.python.org/3/library/stdtypes.html#
 --------
 
 "unordered collection of distinct objects"
+https://realpython.com/python-sets/
 
 * **mutable** `type <http://docs.python.org/3/library/stdtypes.html#set>`_
 * each element is `hashable <http://docs.python.org/3/glossary.html#term-hashable>`_
@@ -97,7 +99,9 @@ an **immutable** sequence `type <http://docs.python.org/3/library/stdtypes.html#
 ``dict``
 --------
 
+
 "efficient for storing of key-value pairs"
+https://realpython.com/python-dicts/
 
 * **mutable** type
 * with `many methods <http://docs.python.org/3/library/stdtypes.html#mapping-types-dict>`_
@@ -126,6 +130,8 @@ Basic methods:
 
 List comprehension
 ------------------
+
+https://www.datacamp.com/community/tutorials/python-list-comprehension
 
 * compact syntax
 * generate lists on demand

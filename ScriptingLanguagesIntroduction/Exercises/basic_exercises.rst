@@ -6,19 +6,20 @@ Exercises
 ---------
 
 #. What are the values of the following expressions? (Why?)
-    a. ``"a" + 1``
-    b. ``type("3.14")``; ``type(type("3.14"))``
-    b. ``type``; ``type(type)``
-    c. ``2.0/3.0``; ``2.0/3``; ``2/3.0``; ``2/3``; 
-    d. ``2//3``; ``2.5//2.1``; ``2.5%2.1``
-    e. ``"a"<"b"``; ``"a"<"á"``; ``"á"<"b"``
-    f. ``None``; ``type(None)``
-    g. ``bool(1)``; ``bool(0.1)``; ``bool(0)``
-    h. ``bool("a")``; ``bool("")``; ``bool(" ")``
-    i. ``bool(bool)``; ``bool(None)``
-    j. ``True or 2``; ``True and 2``
-    k. ``1 or 2``; ``1 and 2``; ``0 and 1``; ``0 or 1``
-    l. ``-1 and ("empty" and 0.0) or str(type(8 is (7+1)))[8:-3] is  "boo"``
+
+    a) ``"a" + 1``
+    b) ``type("3.14")``; ``type(type("3.14"))``
+    c) ``type``; ``type(type)``
+    d) ``2.0/3.0``; ``2.0/3``; ``2/3.0``; ``2/3``;
+    e) ``2//3``; ``2.5//2.1``; ``2.5%2.1``
+    f) ``"a"<"b"``; ``"a"<"á"``; ``"á"<"b"``
+    g) ``None``; ``type(None)``
+    h) ``bool(1)``; ``bool(0.1)``; ``bool(0)``
+    i) ``bool("a")``; ``bool("")``; ``bool(" ")``
+    j) ``bool(bool)``; ``bool(None)``
+    k) ``True or 2``; ``True and 2``
+    l) ``1 or 2``; ``1 and 2``; ``0 and 1``; ``0 or 1``
+    m) ``-1 and ("empty" and 0.0) or str(type(8 is (7+1)))[8:-3] is  "boo"``
     
 
 #. Read two strings from the user and print their concatenation, without the first character of each. The strings will be at least length 1. E.g.: ``'Hello', 'There' → 'ellohere'``
