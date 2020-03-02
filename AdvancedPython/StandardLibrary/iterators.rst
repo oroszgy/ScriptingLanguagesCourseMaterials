@@ -180,7 +180,7 @@ The ``itertools`` module
 
 "The module standardizes a core set of fast, memory efficient tools that are useful by themselves or in combination"
 
-https://docs.python.org/3.4/library/itertools.html
+https://docs.python.org/3/library/itertools.html
 
 -------------
 
