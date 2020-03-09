@@ -340,4 +340,4 @@ Style guides
 ~~~~~~~~~~~~~
 
 * http://www.python.org/dev/peps/pep-0008/
-* http://www.seas.upenn.edu/~lignos/py_antipatterns.html
+* https://github.com/quantifiedcode/python-anti-patterns
