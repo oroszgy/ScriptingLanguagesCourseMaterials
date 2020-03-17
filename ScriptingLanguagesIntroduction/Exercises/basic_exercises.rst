@@ -308,11 +308,15 @@ Exercises
     b) Print the first ``n`` (5) documents with the ``-n 5`` option.
 
 #. **Truecase model:** Truecasing is the task to find out the ordinary case of a word. It is useful for NLP. The model is to count the occurence of the different case form of the words in a dictionary. The key of the dictionary should be the lowercased word. The value of the dictionary is the sorted order of the word forms.
-	#. Create a script file (``truecase_train.py``) which contains the training function of a truecaser. The input is a filename contains the training data (English side of `parallel corpora <http://users.itk.ppke.hu/~laklaja/python2018/OpenSubtitles2018.en-hu.3000.bi.zip>`_) and a model file name where to store the created model file. The required dictionary during the training has the following structure:
+	#. Create a script file (``truecase_train.py``) which contains the training function of a truecaser. The input is a filename contains the training data (English side of `parallel corpora <http://users.itk.ppke.hu/~laklaja/python2018/OpenSubtitles2018.en-hu.3000.bi.zip>`_) and a model file name where to store the created model file.
+	#. Create a script file (``truecase.py``) which contains the truecaser function. The input of this function is the name of the model file and the name of the input and output files
+	#. Create a run.py which imports the previous two files and do a training and a truecasing.
 
-        .. code-block:: json
+    The required dictionary during the training has the following structure:
 
-          {
+    .. code-block:: json
+
+        {
             "cat": {
                 "CAT": 1,
                 "Cat": 5,
@@ -325,11 +329,9 @@ Exercises
                 "SAD": 4,
                 "sad": 8
             }
-          }
+        }
 
-        From this dictionary we have to select the highest probable forms for all words.
-	#. Create a script file (``truecase.py``) which contains the truecaser function. The input of this function is the name of the model file and the name of the input and output files
-	#. Create a run.py which imports the previous two files and do a training and a truecasing.
+    From this dictionary we have to select the highest probable forms for all words.
 
     
 5. Regular expressions
