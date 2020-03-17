@@ -308,8 +308,8 @@ Exercises
     b) Print the first ``n`` (5) documents with the ``-n 5`` option.
 
 #. **Truecase model:** Truecasing is the task to find out the ordinary case of a word. It is useful for NLP. The model is to count the occurence of the different case form of the words in a dictionary. The key of the dictionary should be the lowercased word. The value of the dictionary is the sorted order of the word forms.
-
 	#. Create a script file (``truecase_train.py``) which contains the training function of a truecaser. The input is a filename contains the training data (English side of `parallel corpora <http://users.itk.ppke.hu/~laklaja/python2018/OpenSubtitles2018.en-hu.3000.bi.zip>`_) and a model file name where to store the created model file. The required dictionary during the training has the following structure:
+
         .. code-block:: json
 
           {
