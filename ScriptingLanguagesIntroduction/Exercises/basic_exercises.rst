@@ -78,7 +78,7 @@ Exercises
 3. Functions
 ------------
 
-#. Create a function: given a non-negative number ``num``, return ``True`` if ``num`` is within 2 of a multiple of 10.
+#. Create a function: given a non-negative number ``num``, return ``True`` if ``num`` is one of the multipliers of 10.
 
 #. We want to make a row of bricks that is goal inches long. We have a number of small bricks (1 inch each) and big bricks (5 inches each). Return ``True`` if it is possible to make the goal by choosing from the given bricks. This is a little harder than it looks and can be done without any loops.
 
@@ -224,7 +224,7 @@ Exercises
         >>> centered_average([1, 1, 5, 5, 10, 8, 7])
         5        
 
-4. I/O
+4. I/O and moduls
 ------
 
 #. Implement the Unix ``sort`` command: the program reads lines from a file (if it is given) or from the standard input then prints them in alphabetical order.
@@ -306,7 +306,29 @@ Exercises
         
     a) Make your app work recursively with the ``-r`` option! (you can use ``argparse`` module)
     b) Print the first ``n`` (5) documents with the ``-n 5`` option.
-    
+
+#. **Truecase model:** Truecasing is the task to find out the ordinary case of a word. It is useful for NLP. The model is to count the occurence of the different case form of the words in a dictionary. The key of the dictionary should be the lowercased word. The value of the dictionary is the sorted order of the word forms.
+	#. Create a script file (``truecase_train.py``) which contains the training function of a truecaser. The input is a filename contains the training data (English side of `parallel corpora <http://users.itk.ppke.hu/~laklaja/python2018/OpenSubtitles2018.en-hu.3000.bi.zip>`_) and a model file name where to store the created model file. The required dictionary during the training has the following structure:
+        .. code-block:: json
+
+          {
+            "cat": {
+                "CAT": 1,
+                "Cat": 5,
+                "cat": 10
+            },
+            "chicago": {
+                "Chicago": 3
+            },
+            "sad": {
+                "SAD": 4,
+                "sad": 8
+            }
+          }
+          From this dictionary we have to select the highest probable forms for all words.
+	#. Create a script file (``truecase.py``) which contains the truecaser function. The input of this function is the name of the model file and the name of the input and output files
+	#. Create a run.py which imports the previous two files and do a training and a truecasing.
+
     
 5. Regular expressions
 ----------------------
