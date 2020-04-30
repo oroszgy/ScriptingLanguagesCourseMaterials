@@ -107,9 +107,10 @@ We use Python **3.x** (and not 2.x)!
 
 IDE:
 
+    * **Pycharm** (Free for academic users)
+    * **Notepad++**
     * Spyder
     * IDLE
-    * **Notepad++**
     * *Eclipse+PyDev*
 
 Documentation
@@ -199,6 +200,22 @@ But:
     b = 1
     >>> b + 1 is c
     True
+
+Try:
+
+.. code-block:: python
+
+    a = "I have a cat"
+    b = "I have a cat"
+    >>> a is b
+    False
+
+    a=sys.intern("I have a cat")
+    b=sys.intern("I have a cat")
+    >>> a is b
+    True
+
+https://realpython.com/python-is-identity-vs-equality/
 
 ------
 

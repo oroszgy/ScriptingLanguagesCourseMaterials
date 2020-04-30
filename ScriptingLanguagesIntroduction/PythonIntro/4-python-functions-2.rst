@@ -34,7 +34,7 @@ Nested Functions
 
     def printer(*args):
         def nice_printer(x):
-            print "--%s--"%(x,)
+            print ("--%s--"%(x,))
         for a in args:
             nice_printer(a)
 
@@ -69,14 +69,14 @@ Both type of functions do the same:
 
 	def calc1(x): return (x + 2) / 10
 	calc2 = lambda x: (x + 2) / 10
-	print calc1(42) == calc2(42) # True
+	print (calc1(42) == calc2(42)) # True
 
 Sometimes ``lambda`` can shorten your code:
 
 .. code-block:: python
 
 	def f(do, _with): return do(_with)
-	print f(lambda x: (x + 2) / 10, 8) # 1
+	print (f(lambda x: (x + 2) / 10, 8)) # 1
 
 A more complex example:
 
@@ -215,7 +215,7 @@ Applies a function for each element of a list
 
     >>> map(str.lower, ["A", "B"])
     ['a', 'b']
-    >>> map(max, [4,2,0], [1,3,5])
+    >>> map(max, [[4,2,0], [1,3,5]])
     [4, 5]
 
 ``filter``

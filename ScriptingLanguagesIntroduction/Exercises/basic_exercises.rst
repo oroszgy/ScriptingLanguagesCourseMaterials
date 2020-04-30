@@ -6,19 +6,20 @@ Exercises
 ---------
 
 #. What are the values of the following expressions? (Why?)
-    a. ``"a" + 1``
-    b. ``type("3.14")``; ``type(type("3.14"))``
-    b. ``type``; ``type(type)``
-    c. ``2.0/3.0``; ``2.0/3``; ``2/3.0``; ``2/3``; 
-    d. ``2//3``; ``2.5//2.1``; ``2.5%2.1``
-    e. ``"a"<"b"``; ``"a"<"á"``; ``"á"<"b"``
-    f. ``None``; ``type(None)``
-    g. ``bool(1)``; ``bool(0.1)``; ``bool(0)``
-    h. ``bool("a")``; ``bool("")``; ``bool(" ")``
-    i. ``bool(bool)``; ``bool(None)``
-    j. ``True or 2``; ``True and 2``
-    k. ``1 or 2``; ``1 and 2``; ``0 and 1``; ``0 or 1``
-    l. ``-1 and ("empty" and 0.0) or str(type(8 is (7+1)))[8:-3] is  "boo"``
+
+    a) ``"a" + 1``
+    b) ``type("3.14")``; ``type(type("3.14"))``
+    c) ``type``; ``type(type)``
+    d) ``2.0/3.0``; ``2.0/3``; ``2/3.0``; ``2/3``;
+    e) ``2//3``; ``2.5//2.1``; ``2.5%2.1``
+    f) ``"a"<"b"``; ``"a"<"á"``; ``"á"<"b"``
+    g) ``None``; ``type(None)``
+    h) ``bool(1)``; ``bool(0.1)``; ``bool(0)``
+    i) ``bool("a")``; ``bool("")``; ``bool(" ")``
+    j) ``bool(bool)``; ``bool(None)``
+    k) ``True or 2``; ``True and 2``
+    l) ``1 or 2``; ``1 and 2``; ``0 and 1``; ``0 or 1``
+    m) ``-1 and ("empty" and 0.0) or str(type(8 is (7+1)))[8:-3] is  "boo"``
     
 
 #. Read two strings from the user and print their concatenation, without the first character of each. The strings will be at least length 1. E.g.: ``'Hello', 'There' → 'ellohere'``
@@ -77,7 +78,7 @@ Exercises
 3. Functions
 ------------
 
-#. Create a function: given a non-negative number ``num``, return ``True`` if ``num`` is within 2 of a multiple of 10.
+#. Create a function: given a non-negative number ``num``, return ``True`` if ``num`` is one of the multipliers of 10.
 
 #. We want to make a row of bricks that is goal inches long. We have a number of small bricks (1 inch each) and big bricks (5 inches each). Return ``True`` if it is possible to make the goal by choosing from the given bricks. This is a little harder than it looks and can be done without any loops.
 
@@ -223,7 +224,7 @@ Exercises
         >>> centered_average([1, 1, 5, 5, 10, 8, 7])
         5        
 
-4. I/O
+4. I/O and moduls
 ------
 
 #. Implement the Unix ``sort`` command: the program reads lines from a file (if it is given) or from the standard input then prints them in alphabetical order.
@@ -305,7 +306,33 @@ Exercises
         
     a) Make your app work recursively with the ``-r`` option! (you can use ``argparse`` module)
     b) Print the first ``n`` (5) documents with the ``-n 5`` option.
-    
+
+#. **Truecase model:** Truecasing is the task to find out the ordinary case of a word. It is useful for NLP. The model is to count the occurence of the different case form of the words in a dictionary. The key of the dictionary should be the lowercased word. The value of the dictionary is the sorted order of the word forms.
+	#. Create a script file (``truecase_train.py``) which contains the training function of a truecaser. The input is a filename contains the training data (English side of `parallel corpora <http://users.itk.ppke.hu/~laklaja/python2018/OpenSubtitles2018.en-hu.3000.bi.zip>`_) and a model file name where to store the created model file.
+	#. Create a script file (``truecase.py``) which contains the truecaser function. The input of this function is the name of the model file and the name of the input and output files
+	#. Create a run.py which imports the previous two files and do a training and a truecasing.
+
+    The required dictionary during the training has the following structure:
+
+    .. code-block:: json
+
+        {
+            "cat": {
+                "CAT": 1,
+                "Cat": 5,
+                "cat": 10
+            },
+            "chicago": {
+                "Chicago": 3
+            },
+            "sad": {
+                "SAD": 4,
+                "sad": 8
+            }
+        }
+
+    From this dictionary we have to select the highest probable forms for all words.
+
     
 5. Regular expressions
 ----------------------
@@ -358,7 +385,17 @@ Exercises
     .. code-block:: python
 
         >> word_tokenize(u"Josh, this is a (very) nice day!")
-        u"Jush , this is a ( very ) nice day !"    
+        u"Jush ⬛, this is a (⬛ very ⬛) nice day ⬛!"
+
+#. To translate numbers, dates or URL is a challenge for machine translation systems. These words greatly increase the vocabulary size because MT systems should learn all numburs one-by-one. The solution is placeholders. The task is to create a script which mark all matched numbers in parallel data and change them to a symbol.
+
+    E.g.    ``I live in the 2nd floor.     A 2. emeleten lakom.``
+        should become 
+            ``I live in the ⬛num_1⬛ ⬛nd foor ⬛.      A ⬛num_1⬛ ⬛. emeleten lakom ⬛.``
+            
+    E.g.    `` The date is 26/03/2019.     Ma 2019. 03. 26.-a van.``
+        should become
+            ``The date is ⬛date_1⬛ ⬛.       Ma ⬛date_1⬛ ⬛. ⬛-⬛ a van ⬛.
 
 #. Create a script which shortens a python script by removing all lines that are empty or contain only  comments. 
 
@@ -387,7 +424,7 @@ Exercises
         11
             
     .. file belinkelese - Marci
-#. Download the file ``BadKangaroo.py`` and find the error in the code.
+#. Download the file `BadKangaroo.py <https://www.greenteapress.com/thinkpython/code/BadKangaroo.py>` and find the error in the code.
 
     .. Design Patterns kovetkezo feleves targy, magyarazat szukseges, vagy ki is hagyhatjuk ezt a peldat
 #. Implement the following design patterns:
